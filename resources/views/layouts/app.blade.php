@@ -76,5 +76,8 @@
             @yield('content')
         </main>
     </div>
+    <footer>
+        <div>&copy; {{date('Y')}}</div>
+    </footer>
 </body>
 </html>
