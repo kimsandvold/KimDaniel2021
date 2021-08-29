@@ -5,7 +5,7 @@
     <div class=" justify-content-center">
 
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">User list</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,9 +14,28 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    <br />
-                    <a href="/user">User list</a>
+               
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Epost</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach($users as $user)
+        <tr>
+            <td>
+            {{$user->name}}
+            </td>
+            <td>
+            {{$user->email}}
+            </td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>
+                  
                 </div>
             </div>
       
