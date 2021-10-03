@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Setting;
 
-use App\Setting;
+use Illuminate\Routing\Controller as BaseController;
+use App\Model\Setting;
 use Illuminate\Http\Request;
 
-class SettingController extends Controller
+class SettingController extends BaseController
 {
     public function __construct()
     {
@@ -18,6 +19,6 @@ class SettingController extends Controller
     public function index()
     {
         $settings = Setting::all();
-        return view('settings', ['settings' => $settings]);
+        return view('_setting/settings', ['settings' => $settings]);
     }
 }

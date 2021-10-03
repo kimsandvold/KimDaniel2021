@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
-use App\User;
+use Illuminate\Routing\Controller as BaseController;
+use App\Model\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
     /**
      * Create a new controller instance.
@@ -23,6 +24,11 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('user', ['users' => $users]);
+        return view('_user/user', ['users' => $users]);
+    }
+
+    public function me()
+    {
+        return view('_user/me');
     }
 }
