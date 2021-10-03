@@ -10952,3 +10952,15 @@ footer {
   padding: 1.5rem;
 }
 
+.nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link.current {
+  color: white;
+}
+

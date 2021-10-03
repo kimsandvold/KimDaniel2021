@@ -40,17 +40,17 @@
                         </div>
                         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                             <li class="nav-item">
-                                <a href="/home" class="nav-link align-middle px-0">
+                                <a href="/home" class="nav-link align-middle px-0 @if (\Request::is('home')) current @endif ">
                                     <i class="fas fa-home"></i> <span class="ms-1 d-none d-sm-inline">Startsiden</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/settings" class="nav-link px-0">
+                                <a href="/settings" class="nav-link px-0 @if (\Request::is('settings')) current @endif ">
                                     <i class="fa fa-cog"></i> <span class="d-none d-sm-inline">Settings</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/candidate" class="nav-link px-0">
+                                <a href="/candidate" class="nav-link px-0 @if (\Request::is('candidate')) current @endif">
                                     <i class="fas fa-user-graduate"></i><span class="d-none d-sm-inline"> Kandidater</span>
                                 </a>
 
