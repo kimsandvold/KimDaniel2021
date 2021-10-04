@@ -12,7 +12,19 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    Route::get('test', function () {
+        // Matches The "/admin/users" URL
+    });
+});
+*/
+
+Route::group([
+    'name' => 'api.',
+    'prefix' => 'v1',
+    'middleware' => 'web'
+], function () {
+    Route::get('candidate', 'Candidate\ApiCandidateController@index')->name('candidate-list');
+
 });
