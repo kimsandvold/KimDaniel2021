@@ -17,6 +17,7 @@
 <script>
     export default {
         mounted() {
+            // API route: /api/v1/candidate
             console.log('Component mounted.')
         }
     }
