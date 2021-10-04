@@ -2,7 +2,7 @@
 
 namespace Api\Http\Controllers\Candidate;
 
-use Illuminate\Routing\Controller as BaseController;
+use Api\Http\Controllers\ApiController as BaseController;
 use Illuminate\Http\Request;
 use App\Model\User;
 
